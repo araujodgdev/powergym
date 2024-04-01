@@ -1,8 +1,9 @@
 import Image from "next/image";
 import { vastShadow } from "@/fonts";
 import SignupForm from "@/components/signup-form";
+import { createUser } from "@/actions/userActions";
 
-export default function SignUp() {
+export default async function SignUp() {
   return (
     <main className="flex h-full items-center justify-center bg-zinc-900">
       <section className="flex p-20 w-full flex-col items-center justify-center">
@@ -14,7 +15,7 @@ export default function SignUp() {
           </h1>
           <h2>Crie sua conta</h2>
         </div>
-        <SignupForm />
+        <SignupForm createUser={createUser}/>
       </section>
       <section className="hidden md:flex md:items-center md:justify-center">
         <Image

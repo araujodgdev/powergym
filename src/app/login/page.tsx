@@ -2,7 +2,7 @@ import LoginForm from "@/components/login-form";
 import { vastShadow } from "@/fonts";
 import Image from "next/image";
 
-export default function Home() {
+export default async function Home() {
   return (
     <main className="flex h-full items-center justify-center bg-zinc-900">
       <section className="flex p-20 w-full flex-col items-center justify-center">
