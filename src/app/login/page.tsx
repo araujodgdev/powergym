@@ -2,12 +2,13 @@ import LoginForm from "@/components/login-form";
 import { vastShadow } from "@/fonts";
 import Image from "next/image";
 
-export default function Home() {
+export default async function Home() {
   return (
     <main className="flex h-full items-center justify-center bg-zinc-900">
       <section className="flex p-20 w-full flex-col items-center justify-center">
         <div className="flex flex-col items-center justify-center">
           <h1 className={`font-bold text-4xl text-orange-500 drop-shadow-sm ${vastShadow.className}`}>POWER<span className="text-amber-100">GYM</span></h1>
+          <h2>Entre com sua conta</h2>
         </div>
         <LoginForm />
       </section>

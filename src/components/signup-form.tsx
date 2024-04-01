@@ -31,23 +31,20 @@ const signupFormSchema: any = z.object({
   })
 });
 
-export default function SignupForm() {
+export default function SignupForm({ createUser }: { createUser: any }) {
   const router = useRouter();
   const form = useForm<z.infer<typeof signupFormSchema>>({
     resolver: zodResolver(signupFormSchema),
     defaultValues: {
+      name: '',
       email: "",
       password: "",
     },
   });
 
-  function onSubmit(values: z.infer<typeof signupFormSchema>) {
-    console.log(values)
-  }
-
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="w-full p-6">
+      <form action={createUser} className="w-full p-6">
       <FormField
           control={form.control}
           name="name"
@@ -105,7 +102,7 @@ export default function SignupForm() {
             </FormItem>
           )}
         />
-        <FormField
+        {/* <FormField
           control={form.control}
           name="confirmPassword"
           render={({ field }) => (
@@ -123,7 +120,7 @@ export default function SignupForm() {
               <FormMessage />
             </FormItem>
           )}
-        />
+        /> */}
         <div className="flex flex-col gap-4">
           <Button
             type="submit"
