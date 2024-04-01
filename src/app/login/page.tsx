@@ -8,6 +8,7 @@ export default function Home() {
       <section className="flex p-20 w-full flex-col items-center justify-center">
         <div className="flex flex-col items-center justify-center">
           <h1 className={`font-bold text-4xl text-orange-500 drop-shadow-sm ${vastShadow.className}`}>POWER<span className="text-amber-100">GYM</span></h1>
+          <h2>Entre com sua conta</h2>
         </div>
         <LoginForm />
       </section>
