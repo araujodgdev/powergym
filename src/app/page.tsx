@@ -1,5 +1,5 @@
 import LoginForm from "@/components/login-form";
-import { rubikDoodleShadow, vastShadow } from "@/fonts";
+import { vastShadow } from "@/fonts";
 import Image from "next/image";
 
 export default function Home() {

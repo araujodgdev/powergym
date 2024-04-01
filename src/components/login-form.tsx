@@ -16,7 +16,9 @@ import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 
 const loginFormSchema = z.object({
-  email: z.string().email(),
+  email: z.string().email({
+    message: 'O e-mail deve ser um endereço de e-mail válido'
+  }),
   password: z.string().min(8, {
     message: "A senha deve ter no mínimo 8 caracteres",
   }),
