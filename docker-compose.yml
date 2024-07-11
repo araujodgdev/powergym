@@ -9,14 +9,20 @@ services:
     ports:
       - 3000:3000
     working_dir: /app-front-end
+    restart: 'always'
+    volumes:
+      - ./front-end:/app-front-end
   back-end:
     container_name: back-end
     build: ./back-end
     ports:
       - 4545:4545
     working_dir: /app-back-end
+    restart: 'always'
     networks:
       - app-tier
+    volumes:
+      - ./back-end:/app-back-end
     # depends_on:
     #   - db
   # db:
